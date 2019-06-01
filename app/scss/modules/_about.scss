@@ -1,0 +1,54 @@
+.about {
+	width: 100%;
+	height: 800px;
+	padding-top: 125px;
+	background: $background-white;
+	@media (max-width: 768px){
+		padding-top: 0;
+	}
+	&__text-wrapper {
+		padding-top: 70px;
+		font:20px $font-main;
+		color: #665f60;
+				font-weight: 400;
+			text-decoration: none;
+			transition: none;
+	}
+	&-text {
+		padding-bottom: 30px;
+		
+	}
+	&-img {
+	position: relative;	
+	}
+	&-icon {
+	position: absolute;	
+	top: 10%;
+	left: 45%;
+	}
+	}
+.button-work {
+	margin-top: 70px;
+	margin-left: 215px;
+	&:hover {
+		background: $purple;
+	}
+}
+
+.subtitle {
+font:36px/60px $font-title;
+				font-weight: 400;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $text-white;
+			transition: none;
+	position: absolute;	
+	top: 25%;
+	left: 30%;	
+	@media (max-width: 720px) {
+		font-size: 18px;
+	}	
+}
+
+
+	

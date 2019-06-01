@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&display=swap');
+@include font-face(ProximaNova, 'fonts/ProximaNova/ProximaNova-Regular');
+@include font-face(ProximaNova, 'fonts/ProximaNova/ProximaNova-Bold', 700);
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	scroll-behavior: smooth;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+// Main styles
+.button {
+	display: inline-block;
+	margin: 0 auto;
+	line-height: 50px;
+	text-decoration: none;
+	color: $text-grey;
+	border: 1px solid $text-grey;
+	padding: 0 50px;
+	vertical-align: middle;
+	position: relative;
+	transition-duration: 0.3s;
+
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		transform: scale(1);
+		transition-duration: 0.3s;
+		transition-timing-function: ease-out;
+	}
+
+	&:hover {
+		text-decoration: none;
+		color: $text-grey;
+		border-color: $text-grey;
+	}
+
+	&:hover:before {
+		transform: scale(1);
+	}
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.white {
+	color: $text-white;
+	border-color: $text-white;
+}
+
+
+.map {
+	height: 800px;
+
+	@media (max-width: 1024px) {
+		height: 750px;
+	}
+
+	@media (max-width: 720px) {
+		height: 600px;
+	}
+}
+

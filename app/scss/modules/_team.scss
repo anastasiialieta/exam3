@@ -1,0 +1,101 @@
+.team {
+	background-color: $background-white;
+	padding: 50px 0 100px;
+	text-align: center;
+height: 800px;
+
+	@media (max-width: 720px) {
+		padding: 15px 0;
+		font-size: 12px;
+	}
+
+	.subtitle-team{
+		margin-top: 35px;
+		font:36px/60px $font-title;
+				font-weight: 600;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $text-grey;
+			transition: none;
+	
+	@media (max-width: 720px) {
+		font-size: 18px;
+	}	
+	}
+
+	&-slide{
+
+		padding-top: 190px;
+
+		@media (max-width: 720px) {
+			padding-top: 150px;
+		}
+
+		&_wrapper {
+			background: #fff;
+			position: relative;
+			padding-top: 165px;
+			max-width: 350px;
+			margin: 0 auto;
+		}
+
+		&_photo {
+			@include pos($t:-38%);
+			transform: translateX(16%);
+			border: 13px solid $background-white;
+			border-radius: 50%;
+			z-index: 1;
+		}
+
+		&_name {
+			font:24px $font-title;
+			font-weight: 700;
+			color: $purple;
+			text-transform: uppercase;
+
+			@media (max-width: 720px) {
+				font-size: 16px;
+			}
+		}
+
+		&_postition {
+			margin: 35px 0 45px;
+		}
+
+		&_socials {
+			background: $purple;
+			display: flex;
+			justify-content: center;
+			padding: 15px 0;
+		}
+
+		&_social {
+			margin-left: 25px;
+		}
+	}
+
+
+	.slick-p {
+		@include pos($t:50%, $l:-120px);
+
+		@media (max-width: 1024px) {
+			left: 20px;
+		}
+
+		@media (max-width: 540px) {
+			z-index: -1;
+		}
+	}
+
+	.slick-n {
+		@include pos($t:50%, $r:-120px);
+
+		@media (max-width: 1024px) {
+			right: 20px;
+		}
+
+		@media (max-width: 540px) {
+			z-index: -1;
+		}
+	}
+}
